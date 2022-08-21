@@ -1,0 +1,46 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateContact {
+  onCreateContact {
+    id
+    firstName
+    lastName
+    email
+    phone
+    type
+    subtype
+    otherDesc
+    userId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateContact {
+  onUpdateContact {
+    id
+    firstName
+    lastName
+    email
+    phone
+    type
+    subtype
+    otherDesc
+    userId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteContact {
+  onDeleteContact {
+    id
+    firstName
+    lastName
+    email
+    phone
+    type
+    subtype
+    otherDesc
+    userId
+    createdAt
+    updatedAt
+  }
+}

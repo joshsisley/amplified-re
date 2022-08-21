@@ -1,0 +1,55 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateContact(
+  $input: CreateContactInput!
+  $condition: ModelContactConditionInput
+) {
+  createContact(input: $input, condition: $condition) {
+    id
+    firstName
+    lastName
+    email
+    phone
+    type
+    subtype
+    otherDesc
+    userId
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateContact(
+  $input: UpdateContactInput!
+  $condition: ModelContactConditionInput
+) {
+  updateContact(input: $input, condition: $condition) {
+    id
+    firstName
+    lastName
+    email
+    phone
+    type
+    subtype
+    otherDesc
+    userId
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteContact(
+  $input: DeleteContactInput!
+  $condition: ModelContactConditionInput
+) {
+  deleteContact(input: $input, condition: $condition) {
+    id
+    firstName
+    lastName
+    email
+    phone
+    type
+    subtype
+    otherDesc
+    userId
+    createdAt
+    updatedAt
+  }
+}

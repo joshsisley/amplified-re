@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "amplifiedre",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/joshuasisley/Code/real-estate/amplified-re/amplify/backend/api/amplifiedre/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}
