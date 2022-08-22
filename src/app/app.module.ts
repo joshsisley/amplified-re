@@ -9,6 +9,8 @@ import { CoreModule } from './core/core.module';
 import { MetaReducer, StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { environment } from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthModule } from './auth/auth.module';
 
 export const metaReducers: MetaReducer<any>[] = environment.production ? [] : [];
 
@@ -23,6 +25,8 @@ export const metaReducers: MetaReducer<any>[] = environment.production ? [] : []
     AmplifyAuthenticatorModule,
     StoreModule.forRoot({}, { metaReducers }),
     EffectsModule.forRoot([]),
+    BrowserAnimationsModule,
+    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

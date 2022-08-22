@@ -1,0 +1,25 @@
+<nav id="main-nav">
+  <div class="nav-container">
+    <div class="nav-left">
+      <ul class="nav-links">
+        <li>
+          <a href="/" class="logo">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+          </a>
+        </li>
+        <li>
+          <a href="/contacts">Contacts</a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <div class="nav-right__divider"></div>
+      <button id="account-button" class="nav-right__account" mat-button [matMenuTriggerFor]="menu">
+        {{user.attributes.email}}
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="signOut()">Logout</button>
+      </mat-menu>
+    </div>
+  </div>
+</nav>

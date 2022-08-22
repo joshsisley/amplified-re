@@ -1,0 +1,1 @@
+<app-header *ngIf="userLoaded$ | async" [user]="currentUser$ | async" (signOutEvent)="handleSignOut()"></app-header>
