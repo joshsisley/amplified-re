@@ -4,8 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '', 
-    loadChildren: () => import('./features/contact/contact.module').then(m => m.ContactModule)
+    redirectTo: 'contacts',
+    pathMatch: 'full',
   },
+  {
+    path: 'contacts', 
+    loadChildren: () => import('./features/contact/contact.module').then(m => m.ContactModule)
+  }
 ];
 
 @NgModule({
