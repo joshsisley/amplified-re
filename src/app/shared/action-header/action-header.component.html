@@ -1,0 +1,10 @@
+<div class="page-header">
+  <div class="page-header__desc">
+    <h3 class="h-3">{{ title }}</h3>
+  </div>
+  <div class="page-header__actions">
+    <div *ngFor="let action of actions">
+      <button class="btn btn-primary" [ngClass]="{'btn-contained': action.type === 'primary', 'btn-outlined': action.type === 'secondary'}" (click)="action.onClick()">{{ action.label }}</button>  
+    </div>
+  </div>
+</div>

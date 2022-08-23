@@ -30,7 +30,7 @@ export class ContactEffects {
       concatMap(({ contact }) =>
         this.service.addContact(contact)
       ),
-      map(contacts => ContactActions.added({ contacts }))
+      map(contact => ContactActions.added({ contact }))
     )
   );
 

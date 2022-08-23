@@ -1,0 +1,42 @@
+<form [formGroup]="contactForm" class="add-contact-form">
+  <div class="form-content">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" class="input" id="firstName" formControlName="firstName">
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="input" id="lastName" formControlName="lastName">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="input" id="email" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="tel" class="input" id="phone" formControlName="phone">
+    </div>
+    <div class="form-group">
+      <label for="type">Contact Type</label>
+      <select class="input" formControlName="type">
+        <option value="personal">Personal</option>
+        <option value="professional">Professional</option>
+        <option value="lead">Lead</option>
+      </select>
+    </div>
+    <div *ngIf="subtypeOptions.length" class="form-group">
+      <label for="subtype">Contact Subtype</label>
+      <select class="input" formControlName="subtype">
+        <option *ngFor="let item of subtypeOptions" [value]="item.value">{{item.label}}</option>
+      </select>
+    </div>
+    <div *ngIf="contactForm.controls['subtype'].value === 'other'" class="form-group">
+      <label for="otherDesc">Other</label>
+      <input type="text" class="input" id="otherDesc" formControlName="otherDesc">
+    </div>
+  </div>
+  <div class="action-footer">
+    <button class="btn btn-contained btn-secondary btn-lg" (click)="cancel()">Cancel</button>
+    <button class="btn btn-contained btn-primary btn-lg" [disabled]="contactForm.invalid" (click)="submit()">Submit</button>
+  </div>
+</form>

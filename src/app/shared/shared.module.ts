@@ -4,26 +4,40 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from '../shared/header/header.component';
 
 import { MatMenuModule } from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+
+import { ActionHeaderComponent } from './action-header/action-header.component';
+import { DrawerComponent } from './drawer/drawer.component';
+
+const MATERIAL_MODULES = [
+  MatMenuModule,
+  MatIconModule,
+  MatTableModule,
+  MatDialogModule,
+];
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    MatMenuModule,
-    MatIconModule
+    [...MATERIAL_MODULES],
   ],
   exports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    [...MATERIAL_MODULES],
     HeaderComponent,
-    MatMenuModule,
-    MatIconModule
+    ActionHeaderComponent,
+    DrawerComponent,
   ],
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    ActionHeaderComponent,
+    DrawerComponent,
   ],
   providers: [],
 })

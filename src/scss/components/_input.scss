@@ -1,0 +1,14 @@
+.input {
+  background-color: $secondary;
+  border: 1px solid #cbd6e2;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 3px;
+  padding: 9px 10px;
+  display: block;
+  width: 100%;
+
+  &:focus {
+    outline: 3px solid $default-focus;
+  }
+}

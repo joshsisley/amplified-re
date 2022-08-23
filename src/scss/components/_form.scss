@@ -1,0 +1,58 @@
+.create-contact-form {
+  .form-body {
+    padding: 1rem 2rem;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.125rem;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 0.25rem;
+    font-family: $font-family;
+  }
+}
+
+.form-error {
+  color: $error;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.action-footer {
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid $secondary-border;
+  background-color: $background-gray;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  .btn-secondary {
+    margin-right: 1rem;
+  }
+}
+
+.add-contact-form {
+  .action-footer {
+    width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .action-footer {
+    width: 100% !important;
+    .btn-secondary {
+      justify-content: center;
+    }
+    .btn-primary {
+      justify-content: center;
+    }
+  }
+}

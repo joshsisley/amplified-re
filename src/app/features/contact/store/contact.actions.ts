@@ -10,7 +10,7 @@ const loaded = createAction(
 const add = createAction('[Contact] Add', props<{ contact: Contact }>());
 const added = createAction(
   '[Contact] Added',
-  props<{ contacts: Contact[] }>()
+  props<{ contact: Contact }>()
 );
 
 // const update = createAction(

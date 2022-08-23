@@ -1,1 +1,9 @@
 <app-header *ngIf="userLoaded$ | async" [user]="currentUser$ | async" (signOutEvent)="handleSignOut()"></app-header>
+<section class="contact-list-container">
+  <app-action-header title="Contacts" [actions]="headerActions"></app-action-header>
+  <app-contacts-table [contacts]="contacts$ | async"></app-contacts-table>
+</section>
+
+<app-drawer *ngIf="drawerOpen" [className]="'add-contact-drawer'" direction="bottom">
+  <app-add-contact-form (onCancel)="handleCancel()" (onSubmit)="handleSubmit($event)"></app-add-contact-form>
+</app-drawer>

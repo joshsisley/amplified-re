@@ -1,0 +1,114 @@
+.btn {
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  height: 32px;
+  padding: 4px 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-family: $btn-font-family;
+  line-height: 1.5715;
+
+  svg {
+    margin-right: 6px;
+  }
+
+  span {
+    display: inline-block;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #eaf0f6 !important;
+    border-color: #d3dce6 !important;
+    color: #b8c2cc !important;
+    opacity: 0.65;
+  }
+}
+
+.btn-lg {
+  height: 40px;
+  padding: 6px 15px;
+}
+
+.btn-outlined {
+  &.btn-primary {
+    background-color: transparent;
+    border: 2px solid $primary;
+    color: $primary;
+
+    &:hover {
+      background-color: lighten($color: $primary, $amount: 35%) !important;
+    }
+
+    &:focus {
+      outline: 3px solid $primary-focus;
+      outline-offset: 2px;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: transparent;
+    border: 2px solid $secondary;
+    color: $secondary;
+
+    &:hover {
+      background-color: lighten($color: $secondary, $amount: 35%) !important;
+    }
+
+    &:focus {
+      outline: 3px solid $secondary-border;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.btn-text {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+  height: auto;
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.btn-contained {
+  &.btn-primary {
+    background-color: $primary;
+    border: 1px solid transparent;
+    color: white;
+
+    &:hover {
+      background-color: lighten($color: $primary, $amount: 5%);
+    }
+
+    &:focus {
+      outline: 3px solid $primary-focus;
+      outline-offset: 2px;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $secondary;
+    border: 1px solid $secondary-border;
+    color: $header;
+
+    &:hover {
+      background-color: lighten($color: $secondary, $amount: 5%);
+    }
+
+    &:focus {
+      outline: 3px solid $secondary-border;
+      outline-offset: 2px;
+    }
+  }
+}

@@ -23,9 +23,9 @@ const ContactReducer = createReducer<State>(
     ...state,
     contacts
   })),
-  on(ContactActions.added, (state, { contacts }) => ({
+  on(ContactActions.added, (state, { contact }) => ({
     ...state,
-    contacts
+    contacts: [...state.contacts, contact]
   })),
   // on(ContactActions.updated, (state, { contacts }) => ({
   //   ...state,

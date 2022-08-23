@@ -1,0 +1,44 @@
+.drawer {
+  position: fixed;
+  z-index: 999;
+  background: white;
+  width: 600px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: -3px 0 8px 0 rgb(66 91 118 / 21%);
+  .drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+    height: 68px;
+    line-height: 68px;
+    background: linear-gradient(90deg, #08979c 0%, #13c2c2 100%);
+    color: white;
+    h3 {
+      margin: 0;
+    }
+  }
+  .drawer-footer {
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid $secondary-border;
+    background-color: $background-gray;
+    width: 600px;
+    padding: 0.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+}
+
+@media (max-width: 600px) {
+  .drawer {
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 -3px 8px 0 rgb(66 91 118 / 21%);
+  }
+}
