@@ -1,4 +1,4 @@
-<section @openClose class="drawer" [class]="className">
+<section [@openClose]="open ? 'open' : 'close'" class="drawer" [class]="className">
   <div class="drawer-header">
     <h3 className='h-3'>Create Contact</h3>
   </div>

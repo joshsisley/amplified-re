@@ -24,6 +24,7 @@
     "@ngrx/effects": "^14.2.0",
     "@ngrx/store": "^14.2.0",
     "aws-amplify": "^4.3.32",
+    "ngx-mask": "^14.0.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

@@ -11,13 +11,15 @@ import { ContactEffects } from './store/contact.effects';
 import { ContactService } from './contact.service';
 import { ContactsTableComponent } from './components/contacts-table/contacts-table.component';
 import { AddContactFormComponent } from './components/add-contact-form/add-contact-form.component';
+import { ContactProfileComponent } from './contact-profile/contact-profile.component';
 
 
 @NgModule({
   declarations: [
     ContactListComponent,
     ContactsTableComponent,
-    AddContactFormComponent
+    AddContactFormComponent,
+    ContactProfileComponent
   ],
   imports: [
     CommonModule,

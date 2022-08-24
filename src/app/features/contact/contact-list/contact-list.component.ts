@@ -9,6 +9,7 @@ import { IHeaderAction } from 'src/app/core/model/header-action';
 import { MatDialog } from '@angular/material/dialog';
 import { ICreateContact } from 'src/app/core/model/contact';
 import { Contact } from 'src/app/API.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-list',
@@ -32,7 +33,7 @@ export class ContactListComponent implements OnInit {
     }
   ]
 
-  constructor(private store: Store, public dialog: MatDialog) {
+  constructor(private store: Store, public dialog: MatDialog, private router: Router) {
     this.store.dispatch(AuthActions.loadUser());
     this.store.dispatch(ContactActions.load());
   }
@@ -50,6 +51,10 @@ export class ContactListComponent implements OnInit {
   handleSubmit(contact: Contact) {
     this.store.dispatch(ContactActions.add({ contact }));
     this.drawerOpen = false;
+  }
+
+  handleOpenContact(id: string) {
+    this.router.navigate(['/contacts', id]);
   }
 
 }

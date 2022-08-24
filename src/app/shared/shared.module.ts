@@ -7,15 +7,18 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSortModule } from '@angular/material/sort';
 
 import { ActionHeaderComponent } from './action-header/action-header.component';
 import { DrawerComponent } from './drawer/drawer.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 const MATERIAL_MODULES = [
   MatMenuModule,
   MatIconModule,
   MatTableModule,
   MatDialogModule,
+  MatSortModule,
 ];
 
 @NgModule({
@@ -23,12 +26,14 @@ const MATERIAL_MODULES = [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxMaskModule.forRoot(),
     [...MATERIAL_MODULES],
   ],
   exports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxMaskModule,
     [...MATERIAL_MODULES],
     HeaderComponent,
     ActionHeaderComponent,
