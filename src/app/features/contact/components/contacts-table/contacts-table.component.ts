@@ -32,7 +32,7 @@ export class ContactsTableComponent implements OnInit, OnChanges {
     }
   }
 
-  getContactSubtype(contact: Contact) {
+  getContactSubtype(contact: Partial<Contact>) {
     if (!contact.subtype) {
       return '';
     }

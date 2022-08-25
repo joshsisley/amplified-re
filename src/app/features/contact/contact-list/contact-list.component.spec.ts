@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MockComponent } from 'ng-mocks';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { ContactsTableComponent } from '../components/contacts-table/contacts-table.component';
 
 import { ContactListComponent } from './contact-list.component';
 
@@ -18,7 +20,7 @@ describe('ContactListComponent', () => {
       providers: [
         provideMockStore({ initialState }),
       ],
-      declarations: [ ContactListComponent ]
+      declarations: [ ContactListComponent, MockComponent(ContactsTableComponent) ]
     })
     .compileComponents();
 
